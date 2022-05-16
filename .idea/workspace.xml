@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45af39c4-9222-4be0-a12f-6197d32d8046" name="Changes" comment="Changes on provider code" />
+    <list default="true" id="45af39c4-9222-4be0-a12f-6197d32d8046" name="Changes" comment="Empty user constructor">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/provider/UserProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/provider/UserProvider.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +41,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652717079436</updated>
-      <workItem from="1652717081105" duration="2399000" />
+      <workItem from="1652717081105" duration="4977000" />
     </task>
     <task id="LOCAL-00001" summary="Reloading changes, old repo error">
       <created>1652717175042</created>
@@ -96,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652719688923</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Empty user constructor">
+      <created>1652720096294</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652720096294</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +131,7 @@
     <MESSAGE value="Doing provider and service code" />
     <MESSAGE value="Provider and service code ended, starting test" />
     <MESSAGE value="Changes on provider code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes on provider code" />
+    <MESSAGE value="Empty user constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Empty user constructor" />
   </component>
 </project>
