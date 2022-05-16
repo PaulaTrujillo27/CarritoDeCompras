@@ -11,7 +11,7 @@ public class ProductProvider {
     public void addProduct(Product product) throws SQLException, ClassNotFoundException {
         DbConnection conn = new DbConnection();
 
-        String sql="INSERT INTO productsA00369206(name,price) VALUES ('$NAME','$PRICE')";
+        String sql="INSERT INTO productsA00365285(name,price) VALUES ('$NAME','$PRICE')";
         sql= sql.replace("$NAME",product.getName());
         sql = sql.replace("$PRICE", Double.toString(product.getPrice()));
         conn.runQuery(sql);
@@ -20,7 +20,7 @@ public class ProductProvider {
     public int searchForProductId(String name) throws SQLException, ClassNotFoundException {
         DbConnection conn = new DbConnection();
 
-        String sql="SELECT id FROM productsA00369206 WHERE name = '$NAME'";
+        String sql="SELECT id FROM productsA00365285 WHERE name = '$NAME'";
         sql = sql.replace("$NAME", name);
         ResultSet results =  conn.getData(sql);
         int id = 0;

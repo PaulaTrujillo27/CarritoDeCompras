@@ -23,7 +23,7 @@ public class OrderService {
             provider.addOrder(order);
             return Response.status(200).entity(order).build();
         } catch (SQLException e) {
-            Message m = new Message("Usuario no encontrado", "El ID de usuario no corresponde a un usuario registrado anteriormente");
+            Message m = new Message("SQL Exception", e.getMessage());
             return Response.status(500).entity(m).build();
         } catch (ClassNotFoundException ex) {
             Message m = new Message("Class not found Except", ex.getMessage());

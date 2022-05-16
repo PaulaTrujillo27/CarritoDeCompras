@@ -16,7 +16,7 @@ public class OrderProvider {
 
     public void addOrder(Order order) throws SQLException, ClassNotFoundException {
         DbConnection conn = new DbConnection();
-        String sql = "INSERT INTO ordersA00369206 (creationDate, userID) VALUES ($CREATIONDATE,'$USERID')";
+        String sql = "INSERT INTO ordersA00365285 (creationDate, userID) VALUES ($CREATIONDATE,'$USERID')";
         sql = sql.replace("$CREATIONDATE", Long.toString(new Date().getTime()));
         sql = sql.replace("$USERID", order.getUser());
         conn.runQuery(sql);
@@ -27,20 +27,20 @@ public class OrderProvider {
 
         DbConnection conn = new DbConnection();
 
-        String sql = "UPDATE ordersA00369206 SET payed = 1 WHERE id = $ID";
+        String sql = "UPDATE ordersA00365285 SET payed = 1 WHERE id = $ID";
 
         long time = System.currentTimeMillis();
 
         sql = sql.replace("$ID", info);
         conn.runQuery(sql);
 
-        sql = "UPDATE ordersA00369206 SET paymentDate = '$PAY' WHERE id = $ID";
+        sql = "UPDATE ordersA00365285 SET paymentDate = '$PAY' WHERE id = $ID";
 
         sql = sql.replace("$ID", info);
         sql = sql.replace("$PAY", Long.toString(time));
         conn.runQuery(sql);
 
-        sql = "SELECT * FROM ordersA00369206 WHERE id = $ID AND paymentDate = $PAYDATE";
+        sql = "SELECT * FROM ordersA00365285 WHERE id = $ID AND paymentDate = $PAYDATE";
         sql = sql.replace("$ID", info);
         sql = sql.replace("$PAYDATE", Long.toString(time));
 
@@ -70,7 +70,7 @@ public class OrderProvider {
 
         DbConnection conn = new DbConnection();
 
-        String sql = "INSERT INTO orders_productsA00369206 (orderID, productID,amount) VALUES ('$ORDERID','$PRODUCTID',$QUANTITY)";
+        String sql = "INSERT INTO orders_productsA00365285 (orderID, productID,amount) VALUES ('$ORDERID','$PRODUCTID',$QUANTITY)";
 
         sql = sql.replace("$ORDERID", Integer.toString(order.getIdOrder()));
         sql = sql.replace("$PRODUCTID", Integer.toString(order.getIdProduct()));
@@ -84,8 +84,8 @@ public class OrderProvider {
 
         DbConnection conn = new DbConnection();
 
-        String sql = "SELECT productsA00369206.id, productsA00369206.name, productsA00369206.price, ordersA00369206.id, orders_productsA00369206.amount FROM (productsA00369206 INNER JOIN orders_productsA00369206 " +
-                "ON productsA00369206.id = orders_productsA00369206.productID)INNER JOIN ordersA00369206 ON orders_productsA00369206.orderID = ordersA00369206.id WHERE ordersA00369206.id = $ORDERID";
+        String sql = "SELECT productsA00365285.id, productsA00365285.name, productsA00365285.price, ordersA00365285.id, orders_productsA00365285.amount FROM (productsA00365285 INNER JOIN orders_productsA00365285 " +
+                "ON productsA00365285.id = orders_productsA00365285.productID)INNER JOIN ordersA00365285 ON orders_productsA00365285.orderID = ordersA00365285.id WHERE ordersA00365285.id = $ORDERID";
         sql = sql.replace("$ORDERID", info);
         ArrayList<Product> products = new ArrayList<>();
         int totalPrice = 0;
@@ -118,7 +118,7 @@ public class OrderProvider {
 
         DbConnection conn = new DbConnection();
 
-        String sql = "SELECT * FROM orders_productsA00369206 WHERE orderID = $ORDERID AND productID = $PRODUCTID";
+        String sql = "SELECT * FROM orders_productsA00365285 WHERE orderID = $ORDERID AND productID = $PRODUCTID";
         sql = sql.replace("$ORDERID",  Integer.toString(order.getIdOrder()));
         sql = sql.replace("$PRODUCTID",  Integer.toString(order.getIdProduct()));
 
@@ -131,7 +131,7 @@ public class OrderProvider {
         }
 
         if((amount-order.getAmount())>0) {
-            sql="UPDATE orders_productsA00369206 SET amount = $QUANTITY WHERE orderID = $ORDERID AND productID = $PRODUCTID";
+            sql="UPDATE orders_productsA00365285 SET amount = $QUANTITY WHERE orderID = $ORDERID AND productID = $PRODUCTID";
             sql= sql.replace("$ORDERID",  Integer.toString(order.getIdProduct()));
             sql = sql.replace("$QUANTITY",    Integer.toString(amount-order.getAmount()));
             sql = sql.replace("$PRODUCTID", Integer.toString(order.getIdProduct()));
@@ -151,7 +151,7 @@ public class OrderProvider {
 
         ProductProvider provider = new ProductProvider();
 
-        String sql="DELETE FROM orders_productsA00369206 WHERE orderID = $ORRDERID AND productID = $PRODUCTID";
+        String sql="DELETE FROM orders_productsA00365285 WHERE orderID = $ORRDERID AND productID = $PRODUCTID";
         sql= sql.replace("$ORRDERID", Integer.toString(order.getIdOrder()));
         sql = sql.replace("$PRODUCTID", Integer.toString(order.getIdProduct()));
         conn.runQuery(sql);
@@ -159,3 +159,4 @@ public class OrderProvider {
     }
 
 }
+
