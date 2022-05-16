@@ -40,11 +40,9 @@ public class UserProvider {
             if(!paymentDate.equals("0")){
                 payed=1;
             }
-
-            Order order = new Order(id, payed, Long.parseLong(creationDate), Long.parseLong(paymentDate), natID);
+            Order order = new Order(id, Long.parseLong(creationDate), Long.parseLong(paymentDate),payed, natID);
             orders.add(order);
         }
-
         return orders;
 
     }
