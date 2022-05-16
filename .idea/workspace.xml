@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45af39c4-9222-4be0-a12f-6197d32d8046" name="Changes" comment="Starting provider and service code">
-      <change beforePath="$PROJECT_DIR$/src/main/java/provider/UserProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/provider/UserProvider.java" afterDir="false" />
+    <list default="true" id="45af39c4-9222-4be0-a12f-6197d32d8046" name="Changes" comment="Doing provider and service code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/provider/OrderProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/provider/OrderProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/OrderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652717079436</updated>
-      <workItem from="1652717081105" duration="737000" />
+      <workItem from="1652717081105" duration="2030000" />
     </task>
     <task id="LOCAL-00001" summary="Reloading changes, old repo error">
       <created>1652717175042</created>
@@ -77,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652717539739</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Doing provider and service code">
+      <created>1652718125527</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652718125527</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +110,7 @@
     <MESSAGE value="Initializing code" />
     <MESSAGE value="Importing code from old project" />
     <MESSAGE value="Starting provider and service code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting provider and service code" />
+    <MESSAGE value="Doing provider and service code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Doing provider and service code" />
   </component>
 </project>
